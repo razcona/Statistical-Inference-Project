@@ -1,37 +1,33 @@
-## Welcome to GitHub Pages
+## Welcome to the page for the Statistical Inference Project
 
-You can use the [editor on GitHub](https://github.com/razcona/Statistical-Inference-Project/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+You can view the [Dataset](https://github.com/razcona/Statistical-Inference-Project/tree/master/Data) CSV files for the project in the Data folder.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+### Google Play Store App Dataset
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
+The Dataset that I have chosen to perform a statistical analysis for the project is one that contains details on a long list of Apps that are uploaded on the Android market's Google Play Store. There are 13 features that describe a given app.
 ```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+### The features/columns are as follows:
 
-- Bulleted
-- List
+-App: Application name
+-Category: Category the app belongs to
+-Rating: Overall user rating of the app (as when scraped)
+-Reviews: Number of user reviews for the app (as when scraped)
+-Size: Size of the app (as when scraped)
+-Installs: Number of user downloads/installs for the app (as when scraped)
+-Type: Paid or Free
+-Price: Price of the app (as when scraped)
+-Content: RatingAge group the app is targeted at - Children / Mature 21+ / Adult
+-Genres: An app can belong to multiple genres (apart from its main category). For eg, a musical family game will belong to Music, Game, Family genres.
+-Last Updated: Date when the app was last updated on Play Store (as when scraped)
+-Current Ver: Current version of the app available on Play Store (as when scraped)
+-Android Ver: Min required Android version (as when scraped)
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+For more details and the source of the Dataset visit [Kaggle's Google PlayStore Dataset](https://www.kaggle.com/lava18/google-play-store-apps/home).
 
-### Jekyll Themes
+### Possible predictions and analysis.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/razcona/Statistical-Inference-Project/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+With this Dataset, I hope to answer questions such as how to increase the likelyhood of having a successful app on the Google Play Store. Questions such as would uploading my app for free or for a fee(paid) factor in reaching a wider audience or user base. Also, is success predicated on how good the ratings are for the application and would a higher raiting also mean a larger amount of downloads or installs. Lastly, does the content and genre play a huge factor in the success of the Apps.
