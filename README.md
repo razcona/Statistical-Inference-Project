@@ -54,3 +54,37 @@ Installs Column
 - SD   = 85033154
 
 The updated googleplaystore.csv file and the r file where the code for the calculations are stored can be found in the [data folder](https://github.com/razcona/Statistical-Inference-Project/tree/master/Data) of this project. 
+
+## Update - Project Milestone 4
+### Initial Plots for Numerical Data Columns
+
+### App Installs:
+
+![Histogram of Installs](https://github.com/razcona/Statistical-Inference-Project/tree/master/images/Installs_Histogram.png)
+
+For the Installs column, the above Histogram shows that most of the Apps in the playstore fall between 0 installations - 2 X 10^8 installations. If you carefully observe on the 4 X 10^8 - 6 X 10^8 range and the 8 X 10^8 - 1 X 10^9 range, there is a small histogram noting outliers existing in those ranges. 
+
+![Boxplots of Installs](https://github.com/razcona/Statistical-Inference-Project/tree/master/images/Installs_Boxplot.png)
+
+The above Boxplot shows a stark visualization of the extreme observations represented by the circles outside of the boxplot main structure. Sans the outliers, the range of the App installations are extremely similar that it is difficult to see the boxplot structure properly. The lower and upper hinges aren't clear enough apart that you cannot point out where anything else in between it is such as the median, lower and upper quartile, nor te whiskers.
+
+### App Price:
+
+![Histogram of Prices](https://github.com/razcona/Statistical-Inference-Project/tree/master/images/Prices_Histogram.png)
+
+The above Histogram shows how the most of Apps in the Google Play Store are free versus the few that have a cost. The longest rectangle in the histogram is closer to 0 showing just that. In this graph however, you can barely see the outliers but with the boxplot they are much clearer. 
+
+![Boxplot of Prices](https://github.com/razcona/Statistical-Inference-Project/tree/master/images/Prices_Boxplots.png)
+As represented in this Boxplot there are alot more outliers in this one compared to the installs but the main boxplot structure is even more unrecognizable due to the sheer amount of free apps in the store. 
+
+![Boxplot of Prices Trimmed](https://github.com/razcona/Statistical-Inference-Project/tree/master/images/Prices_Boxplots_Trimmed.png)
+This Boxplot is the same Prices column but with the outliers trimmed so it can be easier to see how close to 0 the observations are further showing that most Apps are free.
+
+### App Ratings:
+
+![Histogram of Ratings](https://github.com/razcona/Statistical-Inference-Project/tree/master/images/Rating_Histogram.png)
+this Histogram represents the User Ratings of each App in the Google Play Store. The ratings range is from 1-5 stars which can be seen in the graph since all of the rectangles are to the left of 5 and somewhat peaking close to 5. The histogram however doesn't give you a more clearer range of where they mostly lie. The Boxplot does show you a better visualiztion.
+
+![Boxplot of Ratings](https://github.com/razcona/Statistical-Inference-Project/tree/master/images/Rating_Boxplot.png)
+With this graph the range is clearer. The Boxplot shows the range lies between 4 - 4.5 stars. This is further proven by taking the mean that was previously calculated which is 4.19. This boxplot compared to the ones for Installs and Prices, has a much larger spread which is visually identifiable by the shape of the boxplot. 
+
