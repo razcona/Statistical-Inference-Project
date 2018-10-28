@@ -92,3 +92,21 @@ this Histogram represents the User Ratings of each App in the Google Play Store.
 
 With this graph the range is clearer. The Boxplot shows the range lies between 4 - 4.5 stars. This is further proven by taking the mean that was previously calculated which is 4.19. This boxplot compared to the ones for Installs and Prices, has a much larger spread which is visually identifiable by the shape of the boxplot. 
 
+## Update - Project Milestone 5
+### Pareto Charts and Analysis for Qualitative Features.
+The 3 columns that I chose to look at through a pareto chart are Category, Content Rating, and Type. 
+
+### Category
+![](images/Category_Pareto.png)
+
+In this chart, you can clearly see the 3 main app categories with the most frequency in the Google Play Store which are 'Family,' 'Game,' and 'Tools.' Their respective percentages are 18.19%, 10.55%, and 7.77%. After 'Tools', the next category drops down to 4.27%, which then gradully drops until the lowest percentage which is a fraction of 1%. Applying the Pareto principle of the "Vital Few", the net casted by the principle in this case is larger than usual since the cut off for the vital few would be any category to the left of the Shopping category since that is where the line from 80% of the cum. percentages touches the curve vertically. That is almost half of all of the categories listed.
+
+### Content Rating
+![](images/Content_Rating_Pareto.png)
+
+In this chart, the most frequent content Rating of 'Everyone' is also the sole rating in the "Vital Few" boundary since it is 80% of all Apps of this rating. The remaining 20% is split among the other 5 ratings with the next largest being rated 'Teen' with a percentage of 11.14%. 
+
+### Type
+![](images/Type_Pareto.png)
+
+Type describes whether its a free or paid app. since there is only 2 and the majority of the apps in the playstore are free (10,039 free apps), The pareto chart isn't necessary to interpret this data. 
