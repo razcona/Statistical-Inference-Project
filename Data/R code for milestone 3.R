@@ -6,7 +6,7 @@
 googlePlayStore <- read.csv("~/Documents/data/googleplaystore.csv", stringsAsFactors = FALSE)
 num_data <- data.frame(data.matrix(googlePlayStore))
 numeric_columns <- sapply(num_data,function(x){mean(as.numeric(is.na(x)))<0.5})
-final_data <- data.frame(num_data[,numeric_columns], char_data[,!numeric_columns])
+final_data <- data.frame(num_data[,numeric_columns], googlePlayStore[,!numeric_columns])
 
 # In the above code, due to issues with certain numerical columns being
 # read as strings in R when reading the csv file, i had to write the above 
