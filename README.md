@@ -110,3 +110,18 @@ In this chart, the most frequent content Rating of 'Everyone' is also the sole r
 ![](images/Type_Pareto.png)
 
 Type describes whether its a free or paid app. since there is only 2 and the majority of the apps in the playstore are free (10,039 free apps), The pareto chart isn't necessary to interpret this data. 
+
+## Update - Project Milestone 6
+### Confidence Intervals of the Numerical Data
+
+In this section of the project, I have computed the confidence intervals of the numerical columns: Price, Ratings and Installs. The confidence interval is computed using the formula mu_hat +/- zα/2 * sigma/sqrt(n). All calculations can be viewed in the R file of milestone 6. For all 3 confidence intervals I chose a 95% confidence level, therefore my alpha = 0.05. 
+
+### Confidence Intervals
+Price: 
+95% confidence interval is {0.73, 1.33}
+
+Rating:
+95% confidence interval is {4.18, 4.20}
+
+Installs:
+95% confidence interval is {13864917, 17066614}
