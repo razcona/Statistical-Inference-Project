@@ -147,7 +147,7 @@ Which Produced the following results:
  
 As seen above, the p-value < alpha so we can reject the null hypothesis and conclude with 95% confidence that Game Apps are less popular than Communication Apps. 
  
- ### Second Hypothesis
+### Second Hypothesis
  
 In the second test I decided to conduct the same test for two other categories; Social Apps (instagram, facebook, twitter, etc...) and Dating Apps. The following R code was the first test performed: 
  
@@ -188,3 +188,16 @@ or the other one-sided test x-y < 0
 or the two-sided x-y != 0. 
 
 ![](images/test6.png)
+
+## Update - Milestone 8
+### Linear Regression Analysis 
+
+I wanted to test whether the Number of installs had any indication on the rating the app recieves by the user and if it is linearly correlated. To do this I computed a regression model and plotted the points with a regression line:
+
+![](images/regression.png)
+
+Looking at the plot, the App Installs and the App Ratings are not linearly correlated. It is logical since a hight number of installs does not directly mean it has a 5 star rating. The level of satisfaction each user has for the App is solely contingent upon the App functionality/quality itself and not the amount of installs. To confirm that the model isn't a good fit for a linear regression analysis, I plotted a histogram using the residuals of the model:
+
+![](images/residuals.png)
+
+As seen, although it does have a semblance of a normally distributed histogram, it is havily skewed to the left which can indicate a bad fit. 
