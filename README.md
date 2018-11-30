@@ -125,3 +125,93 @@ Rating:
 
 Installs:
 95% confidence interval is {13864917, 17066614}
+
+## Update - Project Milestone 7
+### Hypothesis Tests
+
+There are 3 Hypothesis tests that I decided to perform on the Google Play Store dataset using a 95% confidence level, therefore my alpha will be α = 0.05.
+
+### First Hypothesis
+
+In the first test I wanted to see whether the Game Apps are less popular than the Communication Apps (WeChat, WhatsApp Messenger, Gmail etc...) using the number of Installs as the metric of popularity. In order to do this, I took a subset of the dataset with only Game Apps and another subset with only Communication Apps and then performed a one-sided student t-test where the alternative hypothesis is x-y < 0 where x is the mean of the Game Apps and y the mean of the communication apps which if successful, you can reject the null hypothesis, and conclude that Game Apps are less popular than Communication Apps in the Google Play Store.
+
+The following R code performs the t-test explained above:
+
+gameApps <- subset(final_data, Category == "GAME")
+communicationApps <- subset(final_data, Category == "COMMUNICATION")
+t.test(gameApps$Installs, communicationApps$Installs, alternative = "less")
+
+Which Produced the following results: 
+
+	Welch Two Sample t-test
+
+data:  gameApps$Installs and communicationApps$Installs
+t = -4.4097, df = 432.15, p-value = 6.542e-06
+alternative hypothesis: true difference in means is less than 0
+95 percent confidence interval:
+      -Inf -33620137
+sample estimates:
+mean of x mean of y 
+ 30669602  84359887 
+ 
+As seen above, the p-value < alpha so we can reject the null hypothesis and conclude with 95% confidence that Game Apps are less popular than Communication Apps. 
+ 
+ ### Second Hypothesis
+ 
+In the second test I decided to conduct the same test for two other categories; Social Apps (instagram, facebook, twitter, etc...) and Dating Apps. The following R code was the first test performed: 
+ 
+datingApps <- subset(final_data, Category == "DATING")
+socialApps <- subset(final_data, Category == "SOCIAL")
+t.test(socialApps$Installs, datingApps$Installs, alternative = "less")
+
+which produced the following results: 
+
+	Welch Two Sample t-test
+
+data:  socialApps$Installs and datingApps$Installs
+t = 4.5604, df = 294.17, p-value = 1
+alternative hypothesis: true difference in means is less than 0
+95 percent confidence interval:
+     -Inf 63412985
+sample estimates:
+mean of x mean of y 
+ 47694467   1129533 
+
+As seen from the results, the p-value of 1 is greater than the alpha 0.05 so we fail to reject the null hypothesis of x-y = 0, but from the mean of x and y we can infer that there is a difference and since x (social apps) has a significantly larger mean than y (dating apps) the assumption that social media apps were less popular than dating apps, so to confirm that social media apps are more popular, we perform the same test but change the one-sided test to x-y > 0 with the following R code:
+
+t.test(socialApps$Installs, datingApps$Installs, alternative = "greater")
+
+which produced the following result:
+
+	Welch Two Sample t-test
+
+data:  socialApps$Installs and datingApps$Installs
+t = 4.5604, df = 294.17, p-value = 3.75e-06
+alternative hypothesis: true difference in means is greater than 0
+95 percent confidence interval:
+ 29716883      Inf
+sample estimates:
+mean of x mean of y 
+ 47694467   1129533 
+
+In this test the p-value is smaller than the alpha, therefore, we can reject the null hypothesis and conclude that social Apps are more popular than Dating Apps with 95% confidence. 
+
+### Third Hypothesis
+
+In the third test, I wanted to confirm my assumption that Game Apps are on average more expensive than Communication Apps. Therefore I first conducted Right-sided t-test using the average price of Game Apps as x and the average price of Communication Apps as y, with the following code:
+
+t.test(gameApps$Price, communicationApps$Price, alternative = "greater")
+
+which produces the following results:
+	Welch Two Sample t-test
+
+data:  gameApps$Price and communicationApps$Price
+t = 0.50069, df = 673.72, p-value = 0.3084
+alternative hypothesis: true difference in means is greater than 0
+95 percent confidence interval:
+ -0.08312668         Inf
+sample estimates:
+mean of x mean of y 
+0.2511364 0.2148320 
+
+The p-value is greater than the alpha so we fail to reject the null hypothesis. Since the difference in mean of x and y is a small fraction, it does not provide sufficient evidence to conclusively infer that there is a difference in price between the two categories of apps whether we perform the one-sided test x-y >0 as shown above, or the other one-sided test x-y < 0 or the two-sided x-y != 0. 
