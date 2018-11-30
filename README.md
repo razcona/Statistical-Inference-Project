@@ -200,4 +200,4 @@ Looking at the plot, the App Installs and the App Ratings are not linearly corre
 
 ![](images/residuals.png)
 
-As seen, although it does have a semblance of a normally distributed histogram, it is havily skewed to the left which can indicate a bad fit. 
+As seen, although it does have a semblance of a normally distributed histogram, it is heavily skewed to the left which can indicate a bad fit. 
