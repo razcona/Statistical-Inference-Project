@@ -6,7 +6,7 @@
 googlePlayStore <- read.csv("~/Documents/data/googleplaystore.csv", stringsAsFactors = FALSE)
 num_data <- data.frame(data.matrix(googlePlayStore))
 numeric_columns <- sapply(num_data,function(x){mean(as.numeric(is.na(x)))<0.5})
-final_data <- data.frame(num_data[,numeric_columns], googlePlayStorep[,!numeric_columns])
+final_data <- data.frame(num_data[,numeric_columns], googlePlayStore[,!numeric_columns])
 
 # In the above code, due to issues with certain numerical columns being
 # read as strings in R when reading the csv file, i had to write the above 
@@ -16,16 +16,17 @@ final_data <- data.frame(num_data[,numeric_columns], googlePlayStorep[,!numeric_
 # ~ Identifies which columns from the data are numeric
 # ~ Merges the numeric and character columns into a final dataset
 
-googlePlayStore.lm <- lm(Rating~Installs, data = final_data)
+googlePlayStore.lm <- lm(Rating~log(Installs), data = final_data)
 coef(googlePlayStore.lm)
 
 # The above code computes the regression line for Rating and Installs Rating being the dependant 
-# variable and Installs being the independant variable
+# variable and Installs being the independant variable with taking the log of installs
+# to spread out the plot and regression line
 
-plot(Rating~Installs, data = final_data, xlab = "Number of Installs per App", ylab = "App Ratings", main= "Regression analysis of Rating~Installs", ylim = c(0, 5))
-abline(coef(googlePlayStore.lm), col = "red")
+plot(Rating~log(Installs), data = final_data, xlab = "Number of Installs per App (log(Installs))", ylab = "App Ratings", main= "Regression analysis of Rating~Installs", ylim = c(0, 5))
+abline(coef(googlePlayStore.lm), col = "red", lwd = 2)
 
-#The above code makes a scatterplot of the rating vs installs and plots the regression line
+#The above code makes a scatterplot of the rating vs installs(log(installs)) and plots the regression line
 
 hist(residuals(googlePlayStore.lm), col = "blue", main = "Residuals for Google Play Store Dataset", xlab = "Residuals")
 
