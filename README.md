@@ -194,10 +194,10 @@ or the two-sided x-y != 0.
 
 I wanted to test whether the Number of installs had any indication on the rating the app recieves by the user and if it is linearly correlated. To do this I computed a regression model and plotted the points with a regression line:
 
-![](images/regression.png)
+![](images/regression.png) ![](images/regressionlog.png)
 
-Looking at the plot, the App Installs and the App Ratings are not linearly correlated. It is logical since a hight number of installs does not directly mean it has a 5 star rating. The level of satisfaction each user has for the App is solely contingent upon the App functionality/quality itself and not the amount of installs. To confirm that the model isn't a good fit for a linear regression analysis, I plotted a histogram using the residuals of the model:
+Looking at the plot, the App Installs and the App Ratings are not linearly correlated. It is logical since a high number of installs does not directly mean that it'll have a close to 5 star rating. The level of satisfaction each user has for the App is solely contingent upon the App functionality/quality itself and not the amount of installs. However there  is a small trend in the higher number of installs that it has higher rating but just based off of the linear regression model, we do not have sufficient information to make that determination. To confirm that the model isn't a good fit for a linear regression analysis, I plotted a histogram using the residuals of the model:
 
-![](images/residuals.png)
+![](images/residuals.png) ![](images/residualslog.png)
 
 As seen, although it does have a semblance of a normally distributed histogram, it is heavily skewed to the left which can indicate a bad fit. 
