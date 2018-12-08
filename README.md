@@ -221,3 +221,8 @@ As seen in the mean table above, each group mean as well as the grand mean are d
 
 In the posthoc analysis, you can see that not one Content.Rating pair have a difference that makes a p-value smaller than 0.10 making it difficult to conclude that there is a significant difference in Ratings between games targeted at different age groups. 
 
+For the Chi-Squared Test I look at the type feature that lists whether the app is paid or free vs the Genre of the game apps. There are 24 genres of game apps, and each one is either a paid app or a free app. After creating a contigency table with the formula Freq ~ Type + Genres, I then performed the Chisq.test() and got the following results:
+
+![](images/chisquared1.png)
+
+As seen above, the p-value of 0.0002998 is less than an alpha of 0.01 so we can reject the null hypothesis that Type and Genres are independant of each other and conclude with 99% confidence that Type and Genres are correlated. 
