@@ -217,7 +217,7 @@ As seen in the anova table above, the p-value 0.222, so whether I decide to use 
 As seen in the mean table above, each group mean as well as the grand mean are different by a fraction. 
 
 ![](images/posthoc1.png)
-![](images/tukey1.png s=400)
+![](images/tukey1.png)
 
 In the posthoc analysis, you can see that not one Content.Rating pair have a difference that makes a p-value smaller than 0.10 making it difficult to conclude that there is a significant difference in Ratings between games targeted at different age groups. 
 
