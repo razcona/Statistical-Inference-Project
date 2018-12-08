@@ -201,3 +201,23 @@ Looking at the plot, the App Installs and the App Ratings are not linearly corre
 ![](images/residualslog.png)
 
 As seen, although it does have a semblance of a normally distributed histogram, it is heavily skewed to the left which can indicate a bad fit. 
+
+## Update - Final Milestone
+### ANOVA and Chi-Squared Goodness of Fit
+
+For the ANOVA (Analysis of Variance) test I decided to look at only game Apps in the play store.
+First, The mean Rating is 4.19 with not much variance when looked at graphically. The Content.Rating feature shows the age rating of each app which are 4: Everyone, Everyone 10+, Mature 17+, and Teen. In R, I performed an ANOVA test using the Rating~Content.Rating features of game only apps. The By default the ANOVA test sets the null hypothesis as the Rating means of each Content.Rating group being equal and the alternate hypothesis being if at least one group mean is different than the other group means. 
+
+![](images/anova_table1.png)
+
+As seen in the anova table above, the p-value 0.222, so whether I decide to use an alpha of 0.1, 0.05, 0.01, the p-value is greater than the alpha so we fail to reject the null hypothesis because there aren't significant difference in the means. 
+
+![](images/mean_table1.png)
+
+As seen in the mean table above, each group mean as well as the grand mean are different by a fraction. 
+
+![](images/posthoc1.png)
+![](images/tukey1.png)
+
+In the posthoc analysis, you can see that not one Content.Rating pair have a difference that makes a p-value smaller than 0.10 making it difficult to conclude that there is a significant difference in Ratings between games targeted at different age groups. 
+
