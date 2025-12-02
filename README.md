@@ -124,7 +124,7 @@ The updated googleplaystore.csv file and the r file where the code for the calcu
 ## Update - Project Milestone 6
 ### Confidence Intervals of the Numerical Data
 
-- In this section of the project, I have computed the confidence intervals of the numerical columns: Price, Ratings and Installs. The confidence interval is computed using the formula \(\^{\mu }\pm z_{\alpha /2}*\sigma /\sqrt{n}\). All calculations can be viewed in the R file of milestone 6. For all 3 confidence intervals I chose a 95% confidence level, therefore my \(\alpha =0.05\). 
+- In this section of the project, I have computed the confidence intervals of the numerical columns: Price, Ratings and Installs. The confidence interval is computed using the formula mu_hat +/- zα/2 * sigma/sqrt(n). All calculations can be viewed in the R file of milestone 6. For all 3 confidence intervals I chose a 95% confidence level, therefore my alpha = 0.05. 
 
 ### Confidence Intervals
 **Price:** 
